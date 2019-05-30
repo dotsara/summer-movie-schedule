@@ -1,0 +1,27 @@
+body {
+    color: #004466;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: #ea0b8c;
+}
+
+button {
+    background: #c8edff;
+    color: #004466;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: .75rem;
+}
+
+footer {
+    clear: both;
+    padding-top: 5rem;
+}
+
+.movies-list {
+    float: left;
+    margin-right: 5rem;
+    overflow: hidden;
+}
