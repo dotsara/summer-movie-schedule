@@ -4,7 +4,7 @@ My friends and I watch movies (or TV) as a group each week. This summer, we're c
 
 ~Stay tuned! 📺~
 
-👀 `gh-pages` branch
+👀 `gh-pages` branch, http://toolbox.dotsara.com/summer-movie-schedule
 
 
 ## Resources
