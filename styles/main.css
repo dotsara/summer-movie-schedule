@@ -15,6 +15,12 @@ button {
     padding: .75rem;
 }
 
+button:disabled {
+    background: #efefef;
+    color: #999;
+    cursor: default;
+}
+
 footer {
     clear: both;
     padding-top: 5rem;
