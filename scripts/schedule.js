@@ -14,9 +14,9 @@ const shuffleArray = array => array
     .map(a => a[1]);
 
 const shuffledMovies = shuffleArray(movies);
-let btnMixer = document.getElementById('mixer');
+
 function mixUpMovies() {
-    btnMixer.disabled = true;
+    document.getElementById('mixer').disabled = true;
     for (const movie of shuffledMovies) {
         reorderedMovies.innerHTML = reorderedMovies.innerHTML + `<li>${movie}</li>`;
     }
