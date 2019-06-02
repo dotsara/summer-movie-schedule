@@ -21,6 +21,12 @@ button:disabled {
     cursor: default;
 }
 
+header,
+section,
+footer {
+    margin: 1rem;
+}
+
 footer {
     clear: both;
     padding-top: 5rem;
