@@ -47,7 +47,7 @@ const shuffleArray = array => array
 
 // load the list into the page for me
 for (const title of movieTitles) {
-    initialOrder.innerHTML = initialOrder.innerHTML + `<li>${title}</li>`;
+    initialOrder.innerHTML = initialOrder.innerHTML + `<li><i>${title}</i></li>`;
 }
 
 // do the thing!
@@ -59,10 +59,10 @@ function mixUpMovies() {
     shuffleArray(movieTitles).forEach(function(title, i) {
         if (summerDates[i] !== undefined) {
             reorderedMovies.innerHTML =
-                reorderedMovies.innerHTML + `<li>${summerDates[i]}: ${title}</li>`;
+                reorderedMovies.innerHTML + `<li>${summerDates[i]}: <i>${title}</i></li>`;
         } else {
             reorderedMovies.innerHTML =
-                reorderedMovies.innerHTML + `<li>Extra: ${title}</li>`;
+                reorderedMovies.innerHTML + `<li>Extra: <i>${title}</i></li>`;
         }
     })
     document.getElementById('mixer').textContent = 'Mix \'em up again!';

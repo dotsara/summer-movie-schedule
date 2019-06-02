@@ -1,6 +1,7 @@
 body {
     color: #004466;
     font-family: 'Open Sans', sans-serif;
+    line-height: 145%;
 }
 
 a {
@@ -13,12 +14,6 @@ button {
     cursor: pointer;
     font-size: 1.2rem;
     padding: .75rem;
-}
-
-button:disabled {
-    background: #efefef;
-    color: #999;
-    cursor: default;
 }
 
 header,
@@ -36,4 +31,12 @@ footer {
     float: left;
     margin-right: 5rem;
     overflow: hidden;
+}
+
+#reordered-movies li {
+    font-weight: bold;
+}
+
+#reordered-movies li i {
+    font-weight: normal;
 }
