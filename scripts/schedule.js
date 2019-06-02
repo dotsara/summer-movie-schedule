@@ -1,12 +1,8 @@
-const initialOrder = document.getElementById('original-movies');
+// page elements
+const initialOrder = document.getElementById('initial-movies');
 const reorderedMovies = document.getElementById('reordered-movies');
 
-// found shuffle function from Googling
-const shuffleArray = array => array
-    .map(a => [Math.random(), a])
-    .sort((a, b) => a[0] - b[0])
-    .map(a => a[1]);
-
+// data
 const summerDates = [
     '03-June',
     '10-June',
@@ -27,7 +23,6 @@ const moviesList = {
     'Edge of Tomorrow': 'S',
     'Out of Sight': 'S',
     'Raiders of the Lost Ark': 'S',
-    'Alien': 'S',
     'In the Line of Fire': 'S',
     'Mad Max: Fury Road': 'K',
     'Wonder Woman': 'K',
@@ -44,8 +39,13 @@ const moviesList = {
 }
 const movieTitles = Object.keys(moviesList);
 
-// put the original list of movies into the page, so I don't have to
-// do it manually.
+// found function via Googling
+const shuffleArray = array => array
+    .map(a => [Math.random(), a])
+    .sort((a, b) => a[0] - b[0])
+    .map(a => a[1]);
+
+// load the list into the page for me
 for (const title of movieTitles) {
     initialOrder.innerHTML = initialOrder.innerHTML + `<li>${title}</li>`;
 }
@@ -57,8 +57,13 @@ function mixUpMovies() {
         reorderedMovies.innerHTML = '';
     }
     shuffleArray(movieTitles).forEach(function(title, i) {
-        reorderedMovies.innerHTML =
-            reorderedMovies.innerHTML + `<li>${summerDates[i]}: ${title}</li>`;
+        if (summerDates[i] !== undefined) {
+            reorderedMovies.innerHTML =
+                reorderedMovies.innerHTML + `<li>${summerDates[i]}: ${title}</li>`;
+        } else {
+            reorderedMovies.innerHTML =
+                reorderedMovies.innerHTML + `<li>Extra: ${title}</li>`;
+        }
     })
     document.getElementById('mixer').textContent = 'Mix \'em up again!';
 };
